@@ -5,9 +5,10 @@ import MyResponsiveLine from "./Chart.js";
 import CenterGrid from "./latestGrid.js";
 import "./App.css";
 
-import datalol from "./data.js";
+import data from "./data.js";
 
 function App() {
+  console.log(data);
   return (
     <div className="App">
       <NavBar />
@@ -18,8 +19,10 @@ function App() {
       </Container>
 
       <Container maxWidth="lg">
-        <Box mt={3} height="800px">
-          <MyResponsiveLine data={datalol} />
+        <Box mt={3} height="30rem">
+          <MyResponsiveLine data={data} >
+
+          </MyResponsiveLine>
         </Box>
       </Container>
     </div>

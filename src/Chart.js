@@ -1,11 +1,19 @@
 import React from "react";
-import { ResponsiveLine } from "@nivo/line";
+import { ResponsiveLineCanvas } from "@nivo/line";
+import * as time from "d3-time";
+import { timeFormat } from "d3-time-format";
+
 
 const MyResponsiveLine = ({ data }) => (
-  <ResponsiveLine
+  <ResponsiveLineCanvas
     data={data}
     margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
-    xScale={{ type: "point" }}
+    xScale={{
+      type: "time",
+      format: "%Y-%m-%dT%I:%M:%SZ",
+      precision: "day",
+    }}
+    xFormat="time:%Y-%m-%d"
     yScale={{
       type: "log",
       base: 10,
@@ -13,30 +21,31 @@ const MyResponsiveLine = ({ data }) => (
       min: "auto",
       max: "auto",
     }}
-    gridYValues={[10, 100, 1000, 10000, 100000, 1000000, 10000000]}
     axisTop={null}
     axisRight={null}
     axisBottom={{
+      format: "%y %b %d",
       orient: "bottom",
       tickSize: 5,
       tickPadding: 5,
       tickRotation: 0,
-      legend: "transportation",
+      legend: "Date",
       legendOffset: 36,
       legendPosition: "middle",
+      tickValues: "every 30 days",
     }}
     axisLeft={{
       orient: "left",
-    //   tickSize: 5,
-    //   tickPadding: 5,
-    //   tickRotation: 0,
-    //   legend: "count",
+      tickSize: 5,
+      tickPadding: 5,
+      tickRotation: 0,
+      legend: "count",
       legendOffset: -40,
       legendPosition: "middle",
       tickValues: [10, 100, 1000, 10000, 100000, 1000000, 10000000],
     }}
     colors={{ scheme: "nivo" }}
-    pointSize={10}
+    pointSize={1}
     pointColor={{ theme: "background" }}
     pointBorderWidth={2}
     pointBorderColor={{ from: "serieColor" }}

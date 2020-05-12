@@ -5,7 +5,6 @@ import MyResponsiveLine from "./Chart.js";
 import CenterGrid from "./latestGrid.js";
 import "./App.css";
 
-import data from "./data.js";
 
 function App() {
   console.log(data);

@@ -7,12 +7,11 @@ function fetchData() {
   return response;
 }
 
-function finalizeData() {
-  const res = fetchData();
-  let data = [{ id: "United States", color: "hsl(40, 70%, 50%)", data: [res] }];
-  return data;
-}
-
+async function finalizeData() {
+    const res = await fetchData();
+    let data = [{ id: "United States", color: "hsl(40, 70%, 50%)", data: res }];
+    return data;
+  }
 function returnData(item) {
   return { x: item.Date, y: item.Cases };
 }

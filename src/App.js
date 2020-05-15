@@ -1,13 +1,11 @@
 import React from "react";
 import NavBar from "./NavBar";
-import { Container, Box, Grid, Paper } from "@material-ui/core";
+import { Container, Box} from "@material-ui/core";
 import MyResponsiveLine from "./Chart.js";
 import CenterGrid from "./latestGrid.js";
 import "./App.css";
 
-
 function App() {
-  console.log(data);
   return (
     <div className="App">
       <NavBar />
@@ -19,9 +17,7 @@ function App() {
 
       <Container maxWidth="lg">
         <Box mt={3} height="30rem">
-          <MyResponsiveLine data={data} >
-
-          </MyResponsiveLine>
+          <MyResponsiveLine />
         </Box>
       </Container>
     </div>

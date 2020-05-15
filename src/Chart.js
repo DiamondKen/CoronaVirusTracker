@@ -1,7 +1,5 @@
 import React from "react";
 import { ResponsiveLineCanvas } from "@nivo/line";
-import * as time from "d3-time";
-import { timeFormat } from "d3-time-format";
 
 import hook from "./data.js";
 

@@ -2,13 +2,12 @@ import React, { useEffect, useState } from "react";
 import {
   makeStyles,
   createMuiTheme,
-  useTheme,
   ThemeProvider,
 } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import { Typography } from "@material-ui/core";
-import { blue, green, red, grey } from "@material-ui/core/colors";
+import { green, grey } from "@material-ui/core/colors";
 
 const useStyles = makeStyles((theme) => ({
   root: {
